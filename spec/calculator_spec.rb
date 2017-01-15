@@ -88,37 +88,9 @@ describe Calculator do
     end
   end
 
-  describe '#memory' do
-    it 'return what is stored in memory with no value passed in' do
-      expect(Calculator.new.memory).to eq(nil)
+  describe '#stringify' do
+    it 'stringify the output of any result' do
+      expect(Calculator.new(true).add(4,3)).to eq("7")
     end
-
-    it 'return what is in memory' do
-      expect(Calculator.new.memory=(8)).to eq(8)
-    end
-
-    it 'returns saved value' do
-      expect(Calculator.new.memory).to eq(8)
-    end
-
-    it 'clears memory' do
-      expect(Calculator.new.memory).to eq(nil)
-    end
-
-    # it "actually sets the @board variable" do
-
-    #   # First set up the test by running our method
-    #   calc = Calculator.new
-    #   calc.instance_variable_set( :memory, test_array  =  8
-
-    #   # 
-    #   expect( board.instance_variable_get( :@board_array ).to eq( test_array )
-    # end
-
   end
-
-
-#   The memory= function stores an object in memory, overwriting any previous object in memory See the Recipes for hints on testing readers/writers.
-# The memory function returns the object in memory and clears memory when returned, and starts as nil.
-# If the stringify input is passed to a new calculator, the outputs of each of the computational functions above is turned into a string.
 end
